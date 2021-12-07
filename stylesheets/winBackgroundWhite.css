@@ -1,0 +1,100 @@
+/*Structure of the page*/
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:white;
+  }
+  section{
+  height:100%;
+  width:100%;
+    position:absolute ;  background:radial-gradient(#333,#000);
+  }
+
+/*Definition of the different elements in the background and their individual behaviour*/
+
+  .confetti{
+      position:absolute ;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      opacity: 0.75;
+      z-index: -999;
+      pointer-events: none;
+  }
+  .confetti div{
+    position:absolute ;
+    display:block ;
+  }
+  .confetti div:nth-child(1){
+    left:10%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-1s;
+  }
+  .confetti div:nth-child(2){
+    left:20%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-2s;
+  }
+  .confetti div:nth-child(3){
+    left:30%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-3s;
+  }
+  .confetti div:nth-child(4){
+    left:40%; 
+    animation:party 5s linear infinite ; 
+    animation-delay:-4s;
+  }
+  .confetti div:nth-child(5){
+    left:50%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-5s;
+  }
+  .confetti div:nth-child(6){
+    left:60%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-6s;
+  }
+  
+  .confetti div:nth-child(7){
+    left:70%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-7s;
+  }
+
+  .confetti div:nth-child(8){
+    left:80%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-8s;
+  }
+
+  .confetti div:nth-child(9){
+    left:90%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-9s;
+  }
+
+  .confetti div:nth-child(10){
+    left:100%; 
+    animation:party 5s linear infinite ;
+    animation-delay:-10s;
+  }
+
+  .confetti div:nth-child(11){
+    left:0%;
+    animation:party 5s linear infinite;
+    animation-delay: 0s;
+  }
+
+/*Animation for the background elements*/
+
+@keyframes party{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(900px);
+  }
+}

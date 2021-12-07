@@ -1,0 +1,128 @@
+/*Structure of the page*/
+body { 
+  min-height: 100%;
+  display: block;
+  /*The Attributes below prevent the user from masking / selecting any element.*/
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/*General Alignment*/
+.mainWrapper{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*Custom-Font*/
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+
+/*Styling & Animation of the first heading*/
+.container {
+    font-family: neon;
+    position: relative;
+}
+
+.neon {
+    color: #FB4264;
+    font-size: 7.5vw;
+    line-height: 7.5vw;
+    text-shadow: 0 0 2.5vw #F40A35;
+    animation: neon 2s ease infinite;
+    -moz-animation: neon 2s ease infinite;
+    -webkit-animation: neon 2s ease infinite;
+    -o-animation: neon2 2s linear infinite;
+}
+  
+  @keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+      color: #FED128;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+      color: #806914;
+    }
+  }
+
+/*Styling & Animation of the second heading*/
+  .neon2{
+    color: #426DFB;
+    font-size: 5vw;
+    line-height: 5vw;
+    text-shadow: 0 0 2vw #2356ff;
+    animation: neon2 2s linear infinite;
+    -moz-animation: neon2 2s linear infinite;
+    -webkit-animation: neon2 2s linear infinite;
+    -o-animation: neon2 2s linear infinite;
+    margin-top: 5%;
+  }
+  
+  @keyframes neon2 {
+      0%,
+    100% {
+      text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+      color: #28D7FE;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+      color: #146C80;
+    }
+  }
+
+/*Positioning / Alignment of wrapper for buttons*/
+  .wrapper{
+    display: block;
+    position: relative;
+    margin: auto;
+    align-self: center;
+    margin-top: 5%;
+    height: max-content;
+    width: max-content; 
+}
+
+/*Styling of the buttons*/
+button {
+  box-shadow: 0px 2px 4px 0px #91b8b3;
+  background-color:transparent;
+  border-radius:6px;
+  border:2px solid #566963;
+  display:inline-flex;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:"Varela Round";
+  font-size: 2vw;
+  padding: 1.5vw 6vw;
+  text-decoration:none;
+  text-shadow:0px -2px 0px #2b665e;
+}
+
+button:hover {
+  background-color:transparent;
+}
+
+button:active {
+  position:relative;
+  top:2px;
+}
+
+/*Styling, alignment and display settings of the windowWarning.*/
+.windowWarning{
+  font-family: "Varela Round";
+  font-size: 7.5vw;
+  color: #ffff;
+  border: 2vw solid red;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

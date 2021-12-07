@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link href="stylesheets/snake.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" >
+    <link href="lib/snake.ico" rel="icon" type="image/x-icon">
+    <link href="stylesheets/background.css" rel="stylesheet" id="normalBG">
+    <link href="stylesheets/backgroundWhite.css" rel="stylesheet" id="whiteBG">
+    <script language="JavaScript" type="text/javascript" src="js-files/background.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js-files/main.js"></script>
+
+</head>
+
+<body>
+    <!--The mainWrapper includes all necessary content on the page.-->
+    <div class="mainWrapper">
+        <!--Container to align the heading.-->
+        <div class="container">
+            <div class="neon">Snake</div>
+            <div id="score">0</div>
+        </div>
+
+        <!--Containing the pitch the game uses.-->
+        <div class="spielfeld">
+            <canvas id ="canvas"></canvas>
+        </div>  
+
+        <!--In-Game-Sounds.-->
+        <audio id="audioFood">
+            <source src="lib/essen.mp3" type="audio/mpeg"/>
+        </audio>
+
+        <audio id= "audioDeath">
+            <source src="lib/mixkit-retro-arcade-lose-2027.wav" type="audio/wav"/>
+        </audio>
+
+        <audio id= "audioWin">
+            <source src="lib/mixkit-video-game-win-2016.wav" type="audio/wav"/>
+        </audio>
+
+    </div>
+
+    <!--Only displayed when the browser-window is too small.-->
+    <div class="windowWarning">
+        Kleinstgröße unterschritten!
+    </div>
+
+    <!--The divs below contain graphics needed for the background animation.-->
+    <div class="fruits" id="normal">
+        <div>
+            <img src="lib/fruits/image_grapes.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_apple.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_kiwi.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_lemon.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_pear.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_pineapple.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_melon.png">
+        </div>
+    </div>
+
+    <div class="fruits" id="retro">
+        <div>
+            <img src="lib/retro/retro_grapes.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_apple.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_kiwi.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_lemon.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_melon.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_pear.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_pineapple.png">
+        </div>
+    </div>
+</body>
+</html> 

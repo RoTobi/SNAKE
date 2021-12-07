@@ -1,0 +1,115 @@
+/*Structure of the page*/
+body {
+  min-height: 100%;
+  display: block;
+  /*The Attributes below prevent the user from masking / selecting any element.*/
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/*General Alignment*/
+.mainWrapper{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*Custom-Font*/
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+
+/*Styling & Animation of the first heading*/
+.container {
+    text-align: center;
+    font-family: neon;
+}
+
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 7.5vw;
+  line-height: 7.5vw;
+  text-shadow: 0 0 2.5 #F40A35;
+  animation: neon 2s ease infinite;
+  -moz-animation: neon 2s ease infinite;
+  -webkit-animation: neon 2s ease infinite;
+  -o-animation: neon2 2s linear infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+/*Animation used for the score counter*/
+@keyframes neon2 {
+    0%,
+    100% {
+      color: #2873fe;
+    }
+    50% {
+      color: #0e2797;
+    }
+}
+
+/*styling and alignment of the score counter*/
+#score{
+  font-family: neon;
+  border: #426DFB;
+  border-style:solid; 
+  border-color:#426DFB; 
+  border-radius: 20px;
+  color: #426DFB;
+  font-size: 4vw;
+  line-height: 4vw;
+  text-shadow: 0 0 2vw #2356ff;
+  animation: neon2 2s linear infinite;
+  -moz-animation: neon2 2s linear infinite;
+  -webkit-animation: neon2 2s linear infinite;
+  -o-animation: neon2 2s linear infinite;
+  width: 25%;
+  margin: auto;
+}
+
+/*Alignment for canvas container*/
+.spielfeld{
+    display: inline-flex;
+}
+
+/*Styling / Alignment of actual canvas*/
+canvas {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 2vw;
+    align-self: center;
+    height: max-content;
+    width: max-content; 
+}
+
+/*Styling, alignment and display settings of the windowWarning.*/
+.windowWarning{
+  font-family: "Varela Round";
+  font-size: 7.5vw;
+  color: #ffff;
+  border: 2vw solid red;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+

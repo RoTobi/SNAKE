@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link href="stylesheets/index.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css" >
+    <link href="lib/snake.ico" rel="icon" type="image/x-icon">
+    <link href="stylesheets/background.css" rel="stylesheet" id="normalBG">
+    <link href="stylesheets/backgroundWhite.css" rel="stylesheet" id="whiteBG">
+    <script language="JavaScript" type="text/javascript" src="js-files/MinimumSizeOfWindow.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js-files/index.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js-files/background.js"></script>
+</head>
+
+<body>
+    <!--The mainWrapper includes all necessary content on the page.-->
+    <div class="mainWrapper">
+        <!--Container to align the heading.-->
+        <div class="container">
+            <div class="neon">Snake</div>
+            <div class="neon2"><nobr>make it yours</nobr></div>
+        </div>
+    
+        <!--This wrapper is necessary to correctly align and contain the buttons below.-->
+        <div class="wrapper">
+            <button class="startGame" onclick="startSnake()">Spielen</button>
+            <br><br><br>
+            <button class="instructions" onclick="enterInstructions()">Erklärung</button>
+            <br><br><br>          
+            <button class="settings" onclick="enterSettings()">Einstellungen</button>
+        </div>
+
+        <!--Range input to adjust the volume of the in-game sounds.-->
+        <div class="sound">
+            <img src="lib/volume.png" id="volumeIcon">
+            <input type="range" id="volume" min="0" max="10" value="5" oninput="this.nextElementSibling.value = this.value * 10" onclick="SaveVolume()">
+            <output></output>
+        </div>
+
+        <!--Toggle switch to change background color from black to white.-->
+        <div class="backgroundColor">
+            Weißer Hintergrund:
+            <input type="checkbox" class="switch" id="switcherBackground" onclick="SaveBGColor()" onchange="bgreload()">
+            <label for="switcherBackground"></label>
+        </div>
+    </div>
+
+    <!--Only displayed when the browser-window is too small.-->
+    <div class="windowWarning">
+        Kleinstgröße unterschritten; Das Fenster muss mindestens 900 x 600 groß sein! 
+    </div>
+
+    <!--The divs below contain graphics needed for the background animation.-->
+    <div class="fruits" id="normal">
+        <div>
+            <img src="lib/fruits/image_grapes.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_apple.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_kiwi.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_lemon.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_pear.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_pineapple.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_melon.png">
+        </div>
+    </div>
+      
+    <div class="fruits" id="retro">
+        <div>
+            <img src="lib/retro/retro_grapes.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_apple.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_kiwi.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_lemon.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_melon.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_pear.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_pineapple.png">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Einstellungen</title>
+    <link href="stylesheets/settings.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+    <link href="lib/snake.ico" rel="icon" type="image/x-icon">
+    <link href="stylesheets/background.css" rel="stylesheet" id="normalBG">
+    <link href="stylesheets/backgroundWhite.css" rel="stylesheet" id="whiteBG">
+    <script language="JavaScript" type="text/javascript" src="js-files/MinimumSizeOfWindow.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js-files/background.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js-files/settings.js"></script>
+</head>
+
+<body>
+    <!--The mainWrapper includes all necessary content on the page.-->
+    <div class="mainWrapper">
+        <!--Container to align the heading.-->
+        <div class="container">
+            <div class="neon">snake</div>
+            <div class="neon2"><nobr>make it yours</nobr></div>
+        </div>
+        
+        <!--Contains the 2 setting-blocks displayed next to each other on the page. Necessary for alignment.-->
+        <div class="settings">
+            <!--Wraps the range inputs for pitch height and pitch width.-->
+            <div class="settings1">
+                <div class="slider">
+                    Spielfeldhöhe:<br>
+                    <input type="range" id="height" min="7" max="20" value="15" oninput="this.nextElementSibling.value = this.value">
+                    <output></output>
+                </div>
+            
+                <div class="slider">
+                    Spielfeldbreite:<br>                    
+                    <input type="range" id="width" min="7" max="20" value="15" oninput="this.nextElementSibling.value = this.value">
+                    <output></output>
+                </div>
+            </div>
+
+            <!--Wraps the range inputs for the speed and amount of fruits.-->
+            <div class="settings2">
+                <div class="slider">
+                    Geschwindigkeit:<br>
+                    <input type="range" id="speed" min="1" max="5" value="3" oninput="this.nextElementSibling.value = this.value">
+                    <output></output>
+                </div>
+            
+                <div class="slider">
+                    Früchte:<br>
+                    <input type="range" id="fruits" min="1" max="8" value="5" oninput="this.nextElementSibling.value = this.value">
+                    <output></output>
+                </div> 
+            </div>
+        </div>
+
+        <!--This wrapper is necessary to correctly align and contain the buttons below.-->
+        <div class="wrapper">
+            <button class="advanced" onclick="goAdvanced()">Erweiterte Einstellungen</button>
+            <br><br>
+            <button class="back" onclick="goBack()">Zurück zum Menü</button>
+        </div>
+    </div>
+
+    <div class="windowWarning">
+        Kleinstgröße unterschritten; Das Fenster muss mindestens 900 x 600 groß sein!
+    </div>
+
+    <!--The divs below contain graphics needed for the background animation.-->
+    <div class="fruits" id="normal">
+        <div>
+            <img src="lib/fruits/image_grapes.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_apple.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_kiwi.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_lemon.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_pear.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_pineapple.png">
+        </div>
+        <div>
+            <img src="lib/fruits/image_melon.png">
+        </div>
+      </div>
+      
+      <div class="fruits" id="retro">
+        <div>
+            <img src="lib/retro/retro_grapes.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_apple.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_kiwi.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_lemon.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_melon.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_pear.png">
+        </div>
+        <div>
+            <img src="lib/retro/retro_pineapple.png">
+        </div>
+      </div> 
+</body>
+</html>

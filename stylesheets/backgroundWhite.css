@@ -1,0 +1,99 @@
+/*Structure of the page*/
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:white;
+  }
+  section{
+  height:100vw;
+  width:100vw;
+  position:absolute ;  background:radial-gradient(#333,#000);
+  }
+
+/*Definition of the different elements in the background and their individual behaviour*/
+  .fruits{
+      position: fixed;
+      width: 100vw;
+      height: 100vw;
+      top: 0;
+      left: 0;
+      z-index: -999;
+      pointer-events: none;
+  }
+  .fruits div{
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    display: block;
+  }
+  .fruits div:nth-child(1){
+    left:20%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-2s;
+  }
+  .fruits div:nth-child(2){
+    left:70%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-4s;
+  }
+  .fruits div:nth-child(3){
+    left:10%; 
+    animation:fall 20s linear infinite ;
+    animation-delay:-7s;
+  }
+  .fruits div:nth-child(4){
+    left:50%; 
+    animation:fall 18s linear infinite ; 
+    animation-delay:-5s;
+  }
+  .fruits div:nth-child(5){
+    left:85%; 
+    animation:fall 14s linear infinite ;
+    animation-delay:-5s;
+  }
+  .fruits div:nth-child(6){
+    left:15%; 
+    animation:fall 16s linear infinite ;
+    animation-delay:-10s;
+  }
+  .fruits div:nth-child(7){
+    left:90%; 
+    animation:fall 15s linear infinite ;
+    animation-delay:-4s;
+  }
+  
+/*Animation for the background elements*/
+@keyframes fall{
+  0%{
+    opacity:1;
+    top:-10%;
+    transform:translateX(-20px) rotate(0deg);
+  }
+
+  20%{
+    opacity:1;
+    transform:translateX(-20px) rotate(45deg);
+  }
+
+  40%{
+    opacity:1;
+    transform:translateX(-20px) rotate(90deg);
+  }
+
+  60%{
+    opacity:1; 
+    transform:translateX(-20px) rotate(135deg); 
+  }
+
+  80%{ 
+    opacity:1; 
+    transform:translateX(-20px) rotate(180deg);
+  }
+
+  100%{ 
+    opacity:1;       
+    top:110%;
+    transform:translateX(-20px) rotate(225deg);
+  }
+}
